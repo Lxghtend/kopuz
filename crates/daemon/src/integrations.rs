@@ -545,7 +545,7 @@ fn project(
                 let track = session.queued_track(&key).await;
                 let resolved = match track
                     .as_ref()
-                    .and_then(discord_presence::cover_art::youtube_cover_art_url)
+                    .and_then(discord_presence::cover_art::source_cover_art_url)
                 {
                     Some(url) => Some(url),
                     None => {
